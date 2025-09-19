@@ -19,9 +19,12 @@ app = FastAPI()
 class TranslationRequest(BaseModel):
     text: str
 
-@app.post("/translate")
+@app.post("/translateHausa")
 def translate(req: TranslationRequest):
     inputs = tokenizer(req.text, return_tensors="pt", truncation=True).to(device)
     outputs = model.generate(**inputs)
     translation = tokenizer.decode(outputs[0], skip_special_tokens=True)
-    return {"translation": translation}
+    return {
+        "success":True,
+        "translation": translation
+        }
