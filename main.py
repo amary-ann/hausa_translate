@@ -3,6 +3,7 @@ from pydantic import BaseModel
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 import torch
 
+
 # Replace with your HF repo ID, e.g. "username/my-en-ha-translator"
 MODEL_NAME = "amyann/my-en-ha-translator"
 
