@@ -1,4 +1,4 @@
--f https://download.pytorch.org/whl/cpu
+-f https://download.pytorch.org/whl/torch
 fastapi
 uvicorn[standard]
 sentencepiece
